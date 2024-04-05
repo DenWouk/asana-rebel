@@ -1,0 +1,100 @@
+.main-container {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1280px;
+  width: 100%;
+  padding: 20px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 55px;
+  max-width: 450px;
+  padding: 10px;
+}
+
+.main-title {
+  font-size: 70px;
+  font-weight: 700;
+  color: #292929;
+}
+
+.main-description {
+  font-size: 20px;
+  font-weight: 500;
+  color: #292929;
+  line-height: 1.4;
+}
+
+.main-store-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.store-logo {
+  width: 170px;
+  height: 75px;
+}
+
+.phone-img {
+  width: auto;
+  height: 520px;
+}
+
+@media (max-width: 900px) {
+  .main-title {
+    font-size: 48px;
+  }
+
+  .main-description {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .main-content {
+    max-width: 315px;
+  }
+
+  .store-logo {
+    width: 130px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-title {
+    font-size: 36px;
+  }
+
+  .main-description {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .main-content {
+    max-width: 240px;
+  }
+
+  .phone-img {
+    width: auto;
+    height: 470px;
+  }
+
+  .store-logo {
+    width: 110px;
+  }
+}
+
+@media (max-width: 540px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .main-content {
+    gap: 20px;
+  }
+}
