@@ -6,13 +6,13 @@ export default function Navbar() {
   return (
     <>
       <div className="navbar">
-        <Link className="navbar-link" href={"/"}>
+        <Link className="navbar-link" href={"magazine"}>
           Magazine
         </Link>
-        <Link className="navbar-link" href={"/"}>
+        <Link className="navbar-link" href={"help"}>
           Help
         </Link>
-        <Link className="navbar-link" href={"/"}>
+        <Link className="navbar-link" href={"sign-up"}>
           Sign up
         </Link>
       </div>

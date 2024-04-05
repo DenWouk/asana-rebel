@@ -6,7 +6,7 @@ import GooglePlayLogo from "../../public/google-play-logo.svg";
 
 export default function Home() {
   return (
-    <main className="main">
+    <main>
       <div className="main-container">
         <div className="main-content">
           <h1 className="main-title">
