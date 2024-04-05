@@ -3,6 +3,7 @@ import Image from "next/image";
 import PhoneImg from "../../public/phone-img.png";
 import AppStoreLogo from "../../public/app-store-logo.svg";
 import GooglePlayLogo from "../../public/google-play-logo.svg";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -21,16 +22,28 @@ export default function Home() {
           </p>
 
           <div className="main-store-links">
-            <Image
-              src={AppStoreLogo}
-              alt="Apple Store Logo"
-              className="store-logo"
-            />
-            <Image
-              src={GooglePlayLogo}
-              alt="Google Play Logo"
-              className="store-logo"
-            />
+            <Link
+              href="https://www.apple.com/app-store/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={AppStoreLogo}
+                alt="Apple Store Logo"
+                className="store-logo"
+              />
+            </Link>
+            <Link
+              href="https://play.google.com/store/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={GooglePlayLogo}
+                alt="Google Play Logo"
+                className="store-logo"
+              />
+            </Link>
           </div>
         </div>
 
