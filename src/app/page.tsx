@@ -23,7 +23,7 @@ export default function Home() {
 
           <div className="main-store-links">
             <Link
-              href="https://www.apple.com/app-store/"
+              href="https://apps.apple.com/app/asana-rebel-get-in-shape/id1067860796"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -34,7 +34,7 @@ export default function Home() {
               />
             </Link>
             <Link
-              href="https://play.google.com/store/"
+              href="https://play.google.com/store/apps/details?id=com.asanayoga.asanarebel&hl"
               target="_blank"
               rel="noopener noreferrer"
             >
