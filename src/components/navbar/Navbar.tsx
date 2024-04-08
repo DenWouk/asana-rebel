@@ -1,11 +1,12 @@
 import "./Navbar.css";
 import Image from "next/image";
 import Link from "next/link";
+import BurgerMenu from "../burger-menu/BurgerMenu";
 
 export default function Navbar() {
   return (
-    <>
-      <div className="navbar">
+    <nav className="navbar">
+      <div className="navbar-links">
         <Link className="navbar-link" href={"magazine"}>
           Magazine
         </Link>
@@ -17,15 +18,9 @@ export default function Navbar() {
         </Link>
       </div>
 
-      <div className="menu-icon">
-      <Image
-              src="/menu-icon.svg"
-              alt="Menu Icon"
-              className="header-logo-svg"
-              width={40}
-              height={30}
-            />
+      <div className="burger-icon">
+        <BurgerMenu />
       </div>
-    </>
+    </nav>
   );
 }

@@ -33,6 +33,7 @@ export default function Home() {
                 className="store-logo"
               />
             </Link>
+            
             <Link
               href="https://play.google.com/store/apps/details?id=com.asanayoga.asanarebel&hl"
               target="_blank"

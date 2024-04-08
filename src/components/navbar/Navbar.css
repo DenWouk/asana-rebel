@@ -1,6 +1,11 @@
 .navbar {
   display: flex;
   align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
   gap: 20px;
 }
 
@@ -10,17 +15,20 @@
   color: #444444;
 }
 
-.menu-icon {
+.burger-icon {
   display: none;
 }
 
 @media (max-width: 540px) {
-  .navbar {
+  .navbar-links {
     display: none;
   }
 
-  .menu-icon {
+  .burger-icon {
+    position: absolute;
+    right: 20px;
+    top: 0;
     display: flex;
-    align-items: center;
+    justify-content: end;
   }
 }
