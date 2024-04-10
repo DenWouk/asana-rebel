@@ -15,7 +15,11 @@
   color: #444444;
 }
 
-.burger-icon {
+.navbar-link.selected {
+  color: #d46313;
+}
+
+.burger-menu-container {
   display: none;
 }
 
@@ -24,11 +28,10 @@
     display: none;
   }
 
-  .burger-icon {
+  .burger-menu-container {
     position: absolute;
     right: 20px;
     top: 0;
     display: flex;
-    justify-content: end;
   }
 }

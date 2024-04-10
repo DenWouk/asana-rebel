@@ -24,10 +24,6 @@ a {
   text-decoration: none;
 }
 
-.go-home-link {
-  /* position: absolute; */
-  top: 80px;
-  left: 20px;
-  font-weight: 600;
-  color: rgb(6, 99, 139);
+li {
+  list-style: none;
 }

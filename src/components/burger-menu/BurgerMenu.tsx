@@ -2,14 +2,20 @@
 
 import "./BurgerMenu.css";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
+import BurgerIcon from "../../../public/burger-icon.svg";
 
 export default function BurgerMenu() {
   const [active, setActive] = useState(false);
+  const pathname = usePathname();
 
   const toggle = () => {
     setActive((prevState) => !prevState);
   };
+
+  const selected = (href: string) => pathname === href;
 
   return (
     <div className="burger-menu">
@@ -19,34 +25,52 @@ export default function BurgerMenu() {
         checked={active ? true : false}
         onClick={toggle}
       />
-      <div className="hamburger-lines">
-        <span className="line line1"></span>
-        <span className="line line2"></span>
-        <span className="line line3"></span>
-      </div>
+      <Image src={BurgerIcon} alt="Menu Icon" className="burger-icon" />
 
-      <div className="menu-items">
+      <ul className="menu-items">
         <li>
-          <Link className="navbar-link" href={"/"} onClick={toggle}>
+          <Link
+            href={"/"}
+            className={selected("/") ? "navbar-link selected" : "navbar-link"}
+            onClick={toggle}
+          >
             Home
           </Link>
         </li>
         <li>
-          <Link className="navbar-link" href={"magazine"} onClick={toggle}>
+          <Link
+            href={"magazine"}
+            className={
+              selected("/magazine") ? "navbar-link selected" : "navbar-link"
+            }
+            onClick={toggle}
+          >
             Magazine
           </Link>
         </li>
         <li>
-          <Link className="navbar-link" href={"help"} onClick={toggle}>
+          <Link
+            href={"help"}
+            className={
+              selected("/help") ? "navbar-link selected" : "navbar-link"
+            }
+            onClick={toggle}
+          >
             Help
           </Link>
         </li>
         <li>
-          <Link className="navbar-link" href={"sign-up"} onClick={toggle}>
+          <Link
+            href={"sign-up"}
+            className={
+              selected("/sign-up") ? "navbar-link selected" : "navbar-link"
+            }
+            onClick={toggle}
+          >
             Sign up
           </Link>
         </li>
-      </div>
+      </ul>
     </div>
   );
 }
