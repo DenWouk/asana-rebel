@@ -1,77 +1,68 @@
+.burger-menu-container {
+  display: none;
+}
+
 .burger-menu {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 0;
-  margin-right: -20px;
+  width: 100vw;
+  min-height: 100vh;
+  transition: transform 0.3s ease-in-out;
+  transform: translate(-100%);
 }
 
 .menu-items {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100vw;
-  min-height: 100vh;
-  padding-top: 60px;
+  gap: 20px;
+  min-width: 65%;
+  padding: 60px 20px 20px 60px;
+  font-size: 3vw;
   background-color: #fffffff1;
-  transition: transform 0.5s ease-in-out;
-  transform: translate(-100%);
 }
 
-.menu-items.active {
-  transform: translate(0);
+.menu-items .navbar-link {
+  font-size: 5vw;
 }
 
-.burger-menu .menu-items li {
-  margin-bottom: 1.2rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.burger-menu a {
-  text-decoration: none;
-  color: #0e2431;
-  font-weight: 500;
-  font-size: 1.2rem;
-  padding: 0.7rem;
-}
-
-.burger-menu a:hover {
-  font-weight: bolder;
+.transparent-block {
+  width: 100%;
 }
 
 .burger-checkbox {
   position: absolute;
-  display: block;
-  height: 32px;
-  width: 32px;
-  top: 17px;
-  right: 0;
-  z-index: 5;
-  opacity: 0;
+  top: 10px;
+  right: 20px;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
+  opacity: 0;
 }
 
 .burger-icon {
-  display: block;
-  height: 26px;
-  width: 32px;
   position: absolute;
-  top: 17px;
-  right: 0;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.4s ease-in-out;
+  top: 10px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease-in-out;
 }
 
-input[type="checkbox"]:checked ~ .menu-items {
+.burger-checkbox:checked ~ .burger-menu {
   transform: translate(0);
 }
 
-input[type="checkbox"]:checked ~ .burger-icon {
+.burger-checkbox:checked ~ .burger-icon {
   transform: rotate(90deg);
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 540px) {
+  .burger-menu-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    height: 0;
+  }
 }

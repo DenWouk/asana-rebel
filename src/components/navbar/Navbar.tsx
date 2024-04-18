@@ -53,9 +53,7 @@ export default function Navbar() {
         </li>
       </ul>
 
-      <div className="burger-menu-container">
-        <BurgerMenu />
-      </div>
+      <BurgerMenu />
     </nav>
   );
 }

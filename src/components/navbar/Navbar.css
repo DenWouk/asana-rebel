@@ -1,18 +1,10 @@
 .navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .navbar-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 20px;
 }
@@ -23,25 +15,16 @@
   color: #444444;
 }
 
-.navbar-link.selected {
-  color: #d46313;
+.navbar-link:hover {
+  text-decoration: underline;
 }
 
-.burger-menu-container {
-  display: none;
+.navbar-link.selected {
+  color: #d46313;
 }
 
 @media (max-width: 540px) {
   .navbar-links {
     display: none;
-  }
-
-  .burger-menu-container {
-    position: absolute;
-    right: 20px;
-    top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 }
