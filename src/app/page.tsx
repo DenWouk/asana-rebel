@@ -1,6 +1,7 @@
 import "./home.css";
 import Image from "next/image";
 import PhoneImg from "../../public/phone-img.png";
+import { PhoneImgPreload } from "../../public/imgs-base64";
 import AppStoreLogo from "../../public/app-store-logo.svg";
 import GooglePlayLogo from "../../public/google-play-logo.svg";
 import Link from "next/link";
@@ -30,6 +31,7 @@ export default function Home() {
               <Image
                 src={AppStoreLogo}
                 alt="Apple Store Logo"
+                priority={true}
                 className="store-logo"
               />
             </Link>
@@ -42,6 +44,7 @@ export default function Home() {
               <Image
                 src={GooglePlayLogo}
                 alt="Google Play Logo"
+                priority={true}
                 className="store-logo"
               />
             </Link>
@@ -52,7 +55,9 @@ export default function Home() {
           <Image
             src={PhoneImg}
             alt="Mobile Phone Img"
+            quality={100}
             placeholder="blur"
+            blurDataURL={PhoneImgPreload}
             className="phone-img"
           />
         </div>
