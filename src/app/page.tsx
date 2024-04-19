@@ -33,7 +33,7 @@ export default function Home() {
                 className="store-logo"
               />
             </Link>
-            
+
             <Link
               href="https://play.google.com/store/apps/details?id=com.asanayoga.asanarebel&hl"
               target="_blank"
@@ -49,7 +49,12 @@ export default function Home() {
         </div>
 
         <div className="main-img">
-          <Image src={PhoneImg} alt="Mobile Phone Img" className="phone-img" />
+          <Image
+            src={PhoneImg}
+            alt="Mobile Phone Img"
+            placeholder="blur"
+            className="phone-img"
+          />
         </div>
       </div>
     </main>

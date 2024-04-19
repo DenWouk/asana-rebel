@@ -10,13 +10,10 @@
 }
 
 .navbar-link {
+  padding: 5px;
   font-size: 16px;
   font-weight: 600;
   color: #444444;
-}
-
-.navbar-link:hover {
-  text-decoration: underline;
 }
 
 .navbar-link.selected {

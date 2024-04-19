@@ -41,6 +41,7 @@
 .phone-img {
   width: auto;
   height: 520px;
+  border-radius: 30px;
 }
 
 @media (max-width: 900px) {
